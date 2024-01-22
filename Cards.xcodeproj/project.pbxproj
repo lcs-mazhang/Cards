@@ -11,9 +11,9 @@
 		DF5B136F2B59B4730079036D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5B136E2B59B4730079036D /* ContentView.swift */; };
 		DF5B13712B59B4770079036D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF5B13702B59B4770079036D /* Assets.xcassets */; };
 		DF5B13742B59B4770079036D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF5B13732B59B4770079036D /* Preview Assets.xcassets */; };
-		DF5B13802B59BBE30079036D /* PokemonCardsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5B137F2B59BBE30079036D /* PokemonCardsLayout.swift */; };
 		DFEA8A002B5E717700F4DD4D /* PokemonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEA89FF2B5E717700F4DD4D /* PokemonListView.swift */; };
 		DFEA8A042B5E7F1000F4DD4D /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEA8A032B5E7F1000F4DD4D /* Element.swift */; };
+		DFEA8A062B5E807F00F4DD4D /* Bulbasaur.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEA8A052B5E807F00F4DD4D /* Bulbasaur.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,9 +23,9 @@
 		DF5B13702B59B4770079036D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF5B13732B59B4770079036D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DF5B13752B59B4770079036D /* Cards.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cards.entitlements; sourceTree = "<group>"; };
-		DF5B137F2B59BBE30079036D /* PokemonCardsLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCardsLayout.swift; sourceTree = "<group>"; };
 		DFEA89FF2B5E717700F4DD4D /* PokemonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListView.swift; sourceTree = "<group>"; };
 		DFEA8A032B5E7F1000F4DD4D /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
+		DFEA8A052B5E807F00F4DD4D /* Bulbasaur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bulbasaur.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,6 @@
 		DF5B137D2B59B9240079036D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DF5B137F2B59BBE30079036D /* PokemonCardsLayout.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -90,6 +89,7 @@
 			children = (
 				DFEA89FF2B5E717700F4DD4D /* PokemonListView.swift */,
 				DFEA8A032B5E7F1000F4DD4D /* Element.swift */,
+				DFEA8A052B5E807F00F4DD4D /* Bulbasaur.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -166,9 +166,9 @@
 			files = (
 				DF5B136F2B59B4730079036D /* ContentView.swift in Sources */,
 				DF5B136D2B59B4730079036D /* CardsApp.swift in Sources */,
-				DF5B13802B59BBE30079036D /* PokemonCardsLayout.swift in Sources */,
 				DFEA8A002B5E717700F4DD4D /* PokemonListView.swift in Sources */,
 				DFEA8A042B5E7F1000F4DD4D /* Element.swift in Sources */,
+				DFEA8A062B5E807F00F4DD4D /* Bulbasaur.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
