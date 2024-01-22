@@ -16,6 +16,7 @@
 		DF5B13842B59BC8A0079036D /* WaterElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5B13832B59BC8A0079036D /* WaterElement.swift */; };
 		DF5B13862B59BCB00079036D /* NormalElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5B13852B59BCB00079036D /* NormalElement.swift */; };
 		DFEA8A002B5E717700F4DD4D /* PokemonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEA89FF2B5E717700F4DD4D /* PokemonListView.swift */; };
+		DFEA8A022B5E774A00F4DD4D /* LeafElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEA8A012B5E774A00F4DD4D /* LeafElement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		DF5B13832B59BC8A0079036D /* WaterElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterElement.swift; sourceTree = "<group>"; };
 		DF5B13852B59BCB00079036D /* NormalElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalElement.swift; sourceTree = "<group>"; };
 		DFEA89FF2B5E717700F4DD4D /* PokemonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListView.swift; sourceTree = "<group>"; };
+		DFEA8A012B5E774A00F4DD4D /* LeafElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeafElement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		DF5B137E2B59B92C0079036D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DFEA8A012B5E774A00F4DD4D /* LeafElement.swift */,
 				DF5B13812B59BC430079036D /* FireElement.swift */,
 				DF5B13832B59BC8A0079036D /* WaterElement.swift */,
 				DF5B13852B59BCB00079036D /* NormalElement.swift */,
@@ -176,6 +179,7 @@
 				DF5B13802B59BBE30079036D /* PokemonCardsLayout.swift in Sources */,
 				DF5B13842B59BC8A0079036D /* WaterElement.swift in Sources */,
 				DFEA8A002B5E717700F4DD4D /* PokemonListView.swift in Sources */,
+				DFEA8A022B5E774A00F4DD4D /* LeafElement.swift in Sources */,
 				DF5B13862B59BCB00079036D /* NormalElement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

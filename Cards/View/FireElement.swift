@@ -9,7 +9,20 @@ import SwiftUI
 
 struct FireElement: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        ZStack {
+            // First layer
+            Circle()
+                .foregroundColor(.elementRedBorder)
+                .frame(width: 16)
+            // SecondLayer
+            Circle()
+                .foregroundColor(.red)
+                .frame(width: 12)
+            // ThirdLayer
+            Image(systemName: "flame.fill")
+                .colorInvert()
+        }
     }
 }
 
