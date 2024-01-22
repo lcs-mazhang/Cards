@@ -11,6 +11,11 @@
 		DF5B136F2B59B4730079036D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5B136E2B59B4730079036D /* ContentView.swift */; };
 		DF5B13712B59B4770079036D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF5B13702B59B4770079036D /* Assets.xcassets */; };
 		DF5B13742B59B4770079036D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF5B13732B59B4770079036D /* Preview Assets.xcassets */; };
+		DF5B13802B59BBE30079036D /* PokemonCardsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5B137F2B59BBE30079036D /* PokemonCardsLayout.swift */; };
+		DF5B13822B59BC430079036D /* FireElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5B13812B59BC430079036D /* FireElement.swift */; };
+		DF5B13842B59BC8A0079036D /* WaterElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5B13832B59BC8A0079036D /* WaterElement.swift */; };
+		DF5B13862B59BCB00079036D /* NormalElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5B13852B59BCB00079036D /* NormalElement.swift */; };
+		DFEA8A002B5E717700F4DD4D /* PokemonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEA89FF2B5E717700F4DD4D /* PokemonListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		DF5B13702B59B4770079036D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF5B13732B59B4770079036D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DF5B13752B59B4770079036D /* Cards.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cards.entitlements; sourceTree = "<group>"; };
+		DF5B137F2B59BBE30079036D /* PokemonCardsLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCardsLayout.swift; sourceTree = "<group>"; };
+		DF5B13812B59BC430079036D /* FireElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireElement.swift; sourceTree = "<group>"; };
+		DF5B13832B59BC8A0079036D /* WaterElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterElement.swift; sourceTree = "<group>"; };
+		DF5B13852B59BCB00079036D /* NormalElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalElement.swift; sourceTree = "<group>"; };
+		DFEA89FF2B5E717700F4DD4D /* PokemonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,8 @@
 			children = (
 				DF5B136C2B59B4730079036D /* CardsApp.swift */,
 				DF5B136E2B59B4730079036D /* ContentView.swift */,
+				DF5B137D2B59B9240079036D /* Model */,
+				DF5B137E2B59B92C0079036D /* View */,
 				DF5B13702B59B4770079036D /* Assets.xcassets */,
 				DF5B13752B59B4770079036D /* Cards.entitlements */,
 				DF5B13722B59B4770079036D /* Preview Content */,
@@ -67,6 +79,25 @@
 				DF5B13732B59B4770079036D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DF5B137D2B59B9240079036D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DF5B137F2B59BBE30079036D /* PokemonCardsLayout.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DF5B137E2B59B92C0079036D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DF5B13812B59BC430079036D /* FireElement.swift */,
+				DF5B13832B59BC8A0079036D /* WaterElement.swift */,
+				DF5B13852B59BCB00079036D /* NormalElement.swift */,
+				DFEA89FF2B5E717700F4DD4D /* PokemonListView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +170,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF5B13822B59BC430079036D /* FireElement.swift in Sources */,
 				DF5B136F2B59B4730079036D /* ContentView.swift in Sources */,
 				DF5B136D2B59B4730079036D /* CardsApp.swift in Sources */,
+				DF5B13802B59BBE30079036D /* PokemonCardsLayout.swift in Sources */,
+				DF5B13842B59BC8A0079036D /* WaterElement.swift in Sources */,
+				DFEA8A002B5E717700F4DD4D /* PokemonListView.swift in Sources */,
+				DF5B13862B59BCB00079036D /* NormalElement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
