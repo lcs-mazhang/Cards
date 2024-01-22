@@ -28,7 +28,7 @@ struct Element: View {
             // ThirdLayer
             Image(systemName: element)
                 .scaledToFit()
-                .colorInvert()
+                .foregroundColor(.black)
         }
     }
 }
