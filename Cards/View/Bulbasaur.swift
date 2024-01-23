@@ -9,6 +9,7 @@ import SwiftUI
 
 // Stored property
 let backgroundColorGreenToLightGreen = Gradient(colors:[Color.backgroundGreen, Color.backgroundLightGreen, Color.clear])
+let tintGrey = Gradient(colors:[Color.placeHolderGrey, Color.white, Color.clear])
 
 struct Bulbasaur: View {
     var body: some View {
@@ -16,7 +17,7 @@ struct Bulbasaur: View {
             
             //Card size
             RoundedRectangle(cornerSize: CGSize(width: 20, height: 10))
-
+            
                 .cornerRadius(20)
                 .foregroundColor(.borderYellowBulbasaur)
             
@@ -43,16 +44,16 @@ struct Bulbasaur: View {
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             .font(.footnote)
                         Spacer()
-                    
-                    // Element and HP
+                        
+                        // Element and HP
                         Text("HP")
                             .foregroundColor(.black)
-                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                            .fontWeight(.bold)
                             .font(.footnote)
                         Text("60")
                             .foregroundColor(.black)
                             .font(.title2)
-                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                            .fontWeight(.bold)
                         Element(circleBackgroundColor: .elementGreenBorder, circleColor: .green, element: "leaf.fill")
                             .padding(.trailing)
                         
@@ -60,28 +61,39 @@ struct Bulbasaur: View {
                     
                     // Pokemon image place holder
                     
-                        Image("Bulbmon")
-                            .resizable()
-                            .scaledToFit()
-                            .padding(.horizontal,20)
-                            .overlay {
-                                VStack {
-                                    Spacer()
-                                    Rectangle()
-                                        .frame(height: 13)
-                                        .foregroundColor(.placeHolderGrey)
-                                        .padding(.horizontal, 15)
-                                }
-                            }
-                        
-                        
+                    Rectangle()
+                        .frame(height: 150)
+                        .overlay {
+                            Image("Bulbmon")
+                                .resizable()
+                                .scaledToFit()
+                                .padding(.horizontal,20)
+                        }
                     
+                    // Description
+                    HStack{
+                        Element(circleBackgroundColor: .gray, circleColor:.elementGrayInside , element: "")
+                            .padding(.leading,10)
+                        Text("Shake Vine")
+                            .foregroundColor(.black)
+                            .font(.title3)
+                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                            .padding(.leading,25)
+                        Spacer()
+                    }
+                    HStack{
+                        Text("The Defending Pokemon is now Asleep")
+                            .foregroundColor(.black)
+                            .font(.footnote)
+                            .padding(.leading,10)
+                        Spacer()
+                    }
                     
                 }
             }
             .padding(13)
             
-
+            
             
         }
         .frame(width: 280, height: 400)
