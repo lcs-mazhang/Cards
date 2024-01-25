@@ -19,6 +19,7 @@
 		DFF298492B622F8900DE94CB /* Venusaur.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF298482B622F8900DE94CB /* Venusaur.swift */; };
 		DFF2984B2B62D41700DE94CB /* Virzion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF2984A2B62D41700DE94CB /* Virzion.swift */; };
 		DFF2984D2B62D6A100DE94CB /* Bounsweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF2984C2B62D6A100DE94CB /* Bounsweet.swift */; };
+		DFF2984F2B62D9DD00DE94CB /* PokemonListPlaceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF2984E2B62D9DD00DE94CB /* PokemonListPlaceHolder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		DFF298482B622F8900DE94CB /* Venusaur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venusaur.swift; sourceTree = "<group>"; };
 		DFF2984A2B62D41700DE94CB /* Virzion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Virzion.swift; sourceTree = "<group>"; };
 		DFF2984C2B62D6A100DE94CB /* Bounsweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bounsweet.swift; sourceTree = "<group>"; };
+		DFF2984E2B62D9DD00DE94CB /* PokemonListPlaceHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListPlaceHolder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				DFEA8A072B5EB37800F4DD4D /* PokemonList.swift */,
+				DFF2984E2B62D9DD00DE94CB /* PokemonListPlaceHolder.swift */,
 				DFEA8A032B5E7F1000F4DD4D /* ElementType.swift */,
 				DFEA8A052B5E807F00F4DD4D /* PokemonCardsLayout.swift */,
 				DFEA8A0B2B622C5F00F4DD4D /* CardsFolder */,
@@ -189,6 +192,7 @@
 			files = (
 				DFF298472B622D4F00DE94CB /* Ivysaur.swift in Sources */,
 				DF5B136F2B59B4730079036D /* ContentView.swift in Sources */,
+				DFF2984F2B62D9DD00DE94CB /* PokemonListPlaceHolder.swift in Sources */,
 				DFF2984B2B62D41700DE94CB /* Virzion.swift in Sources */,
 				DF5B136D2B59B4730079036D /* CardsApp.swift in Sources */,
 				DFF2984D2B62D6A100DE94CB /* Bounsweet.swift in Sources */,

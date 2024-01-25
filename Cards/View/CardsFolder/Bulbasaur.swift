@@ -50,5 +50,7 @@ struct Bulbasaur: View {
 }
 
 #Preview {
-    Bulbasaur()
+    NavigationStack {
+        Bulbasaur()
+    }
 }

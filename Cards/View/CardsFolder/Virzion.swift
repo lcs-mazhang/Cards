@@ -50,5 +50,7 @@ struct Virzion: View {
 }
 
 #Preview {
-    Virzion()
+    NavigationStack {
+        Virzion()
+    }
 }

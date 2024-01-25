@@ -50,5 +50,7 @@ struct Venusaur: View {
 }
 
 #Preview {
-    Venusaur()
+    NavigationStack {
+        Venusaur()
+    }
 }

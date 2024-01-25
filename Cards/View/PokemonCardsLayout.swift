@@ -43,7 +43,7 @@ struct PokemonCardsLayout: View {
     let retreatElement: Element
     let pokemonStory: String
     
-    
+    // Coumputed properties
     var body: some View {
         ZStack{
             

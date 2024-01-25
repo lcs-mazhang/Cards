@@ -14,6 +14,7 @@ struct Element: View {
     let circleColor: Color
     let element: String
     
+    // Coumputed properties
     var body: some View {
         
         ZStack {

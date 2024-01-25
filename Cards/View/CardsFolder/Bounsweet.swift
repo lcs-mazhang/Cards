@@ -50,5 +50,7 @@ struct Bounsweet: View {
 }
 
 #Preview {
-    Bounsweet()
+    NavigationStack {
+        Bounsweet()
+    }
 }

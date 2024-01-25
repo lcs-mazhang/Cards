@@ -50,5 +50,7 @@ struct Ivysaur: View {
 }
 
 #Preview {
-    Ivysaur()
+    NavigationStack {
+        Ivysaur()
+    }
 }
