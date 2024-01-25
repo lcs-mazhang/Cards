@@ -88,6 +88,27 @@ struct Bulbasaur: View {
                             .padding(.leading,10)
                         Spacer()
                     }
+                        // BulletSeed
+
+                    HStack{
+                        Element(circleBackgroundColor: .elementGreenBorder, circleColor: .green, element: "leaf.fill")
+                            .padding(.leading,10)
+                        Element(circleBackgroundColor: .elementGreyBorder, circleColor: .white, element: "star.fill")
+                        Text("Bullet Seed")
+                            .foregroundColor(.black)
+                            .font(.title3)
+                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                        Spacer()
+                    }
+                    
+                    HStack{
+                        Text("Flip 4 coins. This attack does 10 damage times the number of heads")
+                            .foregroundColor(.black)
+                            .font(.footnote)
+                            .padding(.leading,10)
+                        Spacer()
+                    }
+                    
                     
                 }
             }
