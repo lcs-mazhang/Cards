@@ -13,16 +13,18 @@ import SwiftUI
 struct PokemonCardsLayout: View {
     
     // Stored property
-
+    
     // Gradient
-    let backgroundColorGreenToLightGreen = Gradient(colors:[Color.backgroundGreen, Color.backgroundLightGreen, Color.tint, Color.backgroundGreen, Color.backgroundLightGreen, Color.tint,Color.backgroundGreen, Color.backgroundLightGreen])
-    let tintGrey = Gradient(colors:[Color.placeHolderGrey, Color.white, Color.clear])
+    let backgroundColorGreenToLightGreen = Gradient(colors:[Color.backgroundGreen, Color.backgroundLightGreen, Color.tintGreen, Color.backgroundGreen, Color.backgroundLightGreen, Color.tintGreen,Color.backgroundGreen, Color.backgroundLightGreen])
     let cardborderColor = Gradient(colors:[Color.borderYellowCharmander, Color.borderYellowLighter, Color.borderYellowCharmander])
     let placeholderColor = Gradient(colors:[Color.gray, Color.white, Color.gray])
     let colorsBulbsaur = Gradient(colors: [.green, .white, .green, .white])
-
+    
+//    let backgroundRedtoLightRed = Gradient(colors:[Color.backgroundRed, Color.backgroundLightRed, Color.tintRed, Color.backgroundRed, Color.backgroundLightRed, Color.tintRed,Color.backgroundRed, Color.backgroundLightRed])
+//    let colorsCharmander = Gradient(colors: [.red, .white, .red, .white])
+    
     // Values
-
+    
     let titleOfPokemon: String
     let lvOfPokemon: String
     let hpNumber: String
@@ -68,12 +70,12 @@ struct PokemonCardsLayout: View {
                         Text(titleOfPokemon)
                             .overlay {
                                 LinearGradient(gradient: colorsBulbsaur, startPoint: .leading,
-                                       endPoint: .trailing
-                                   )
-                                   .mask(
-                                       Text(titleOfPokemon)
-                                   )
-                               }
+                                               endPoint: .trailing
+                                )
+                                .mask(
+                                    Text(titleOfPokemon)
+                                )
+                            }
                             .foregroundColor(.black)
                             .font(.title2)
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
@@ -100,27 +102,27 @@ struct PokemonCardsLayout: View {
                     
                     // Pokemon image place holder
                     
-                            Image(pokemonImage)
-                                .resizable()
-                                .scaledToFit()
-                                .border(Color.gray, width: 5)
-                                .padding(.horizontal,20)
-                                .overlay{
-                                    
-                                    VStack{
-                                        Spacer()
-                                        Rectangle()
-                                            .fill(LinearGradient(gradient: placeholderColor, startPoint: .top, endPoint: .bottom))
-                                            .frame(height: 10)
-                                            .padding(.horizontal,10)
-                                            .overlay{
-                                                Text(pokemonData)
-                                                    .foregroundColor(.black)
-                                                    .font(.system(size: 8))
-                                                
-                                            }
+                    Image(pokemonImage)
+                        .resizable()
+                        .scaledToFit()
+                        .border(Color.gray, width: 5)
+                        .padding(.horizontal,20)
+                        .overlay{
+                            
+                            VStack{
+                                Spacer()
+                                Rectangle()
+                                    .fill(LinearGradient(gradient: placeholderColor, startPoint: .top, endPoint: .bottom))
+                                    .frame(height: 10)
+                                    .padding(.horizontal,10)
+                                    .overlay{
+                                        Text(pokemonData)
+                                            .foregroundColor(.black)
+                                            .font(.system(size: 8))
+                                        
                                     }
-                    }
+                            }
+                        }
                     
                     
                     // Description
@@ -141,8 +143,8 @@ struct PokemonCardsLayout: View {
                             .padding(.leading,10)
                         Spacer()
                     }
-                        // BulletSeed
-
+                    // BulletSeed
+                    
                     HStack{
                         secondSkillElement
                             .padding(.leading,10)
@@ -211,5 +213,41 @@ struct PokemonCardsLayout: View {
 }
 
 #Preview {
-    PokemonCardsLayout(titleOfPokemon: "Bulbsaur", lvOfPokemon: "LV.14", hpNumber: "60", elementIconTypeOfPokemon: Element(circleBackgroundColor: .elementGreenBorder, circleColor: .green, element: "leaf.fill"), pokemonImage: "Bulbmon", pokemonData: "No. 003 Seed Pokemon HT.2,04'WT.15.2", firstSkillName: "Shake Vine", firstSkillDiscirption: "The Defending Pokemon is now Asleep", firstSkillElement: Element(circleBackgroundColor: .gray, circleColor: .elementGrayInside, element: "" ), secondSkillName: "Bullet Seed", secondSkillDiscirption: "Flip 4 coins. This attack does 10 damage times the number of heads", secondSkillElement: Element(circleBackgroundColor: .elementGreenBorder, circleColor: .green, element: "leaf.fill"), secondSkillElement_2: Element(circleBackgroundColor: .elementGreyBorder, circleColor: .white, element: "star.fill"), weeknessElement: Element(circleBackgroundColor: .elementRedBorder, circleColor: .red, element: "flame.fill"), resistanceElement: Element(circleBackgroundColor: .elementBlueBorder, circleColor: .blue, element: "drop.fill"), retreatElement: Element(circleBackgroundColor: .elementGreyBorder, circleColor: .white, element: "star.fill"), pokemonStory: "Bulbasaur is given to Ash, but it is pessimistic about him. However, its loyalties begin to improve and it eventually becomes one of Ash's most faithful Pokémon.")
+    PokemonCardsLayout(titleOfPokemon: "Bulbsaur", 
+                       lvOfPokemon: "LV.14",
+                       hpNumber: "60",
+                       elementIconTypeOfPokemon: Element(
+                        circleBackgroundColor: .elementGreenBorder,
+                        circleColor: .green,
+                        element: "leaf.fill"),
+                       pokemonImage: "Bulbmon",
+                       pokemonData: "No. 003 Seed Pokemon HT.2,04'WT.15.2",
+                       firstSkillName: "Shake Vine",
+                       firstSkillDiscirption: "The Defending Pokemon is now Asleep",
+                       firstSkillElement: Element(
+                        circleBackgroundColor: .gray,
+                        circleColor: .elementGrayInside,
+                        element: "" ),
+                       secondSkillName: "Bullet Seed",
+                       secondSkillDiscirption: "Flip 4 coins. This attack does 10 damage times the number of heads", secondSkillElement: Element(
+                        circleBackgroundColor: .elementGreenBorder,
+                        circleColor: .green,
+                        element: "leaf.fill"),
+                       secondSkillElement_2: Element(
+                        circleBackgroundColor: .elementGreyBorder,
+                        circleColor: .white,
+                        element: "star.fill"),
+                       weeknessElement: Element(
+                        circleBackgroundColor: .elementRedBorder,
+                        circleColor: .red,
+                        element: "flame.fill"),
+                       resistanceElement: Element(
+                        circleBackgroundColor: .elementBlueBorder,
+                        circleColor: .blue,
+                        element: "drop.fill"),
+                       retreatElement: Element(
+                        circleBackgroundColor: .elementGreyBorder,
+                        circleColor: .white,
+                        element: "star.fill"),
+                       pokemonStory: "Bulbasaur is given to Ash, but it is pessimistic about him. However, its loyalties begin to improve and it eventually becomes one of Ash's most faithful Pokémon.")
 }
