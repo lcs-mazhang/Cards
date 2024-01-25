@@ -61,14 +61,28 @@ struct Bulbasaur: View {
                     
                     // Pokemon image place holder
                     
-                    Rectangle()
-                        .frame(height: 150)
-                        .overlay {
                             Image("Bulbmon")
                                 .resizable()
                                 .scaledToFit()
+                                .border(Color.gray, width: 5)
                                 .padding(.horizontal,20)
-                        }
+                                .overlay{
+                                    
+                                    VStack{
+                                        Spacer()
+                                        Rectangle()
+                                            .frame(height: 10)
+                                            .border(Color.gray, width: 2)
+                                            .padding(.horizontal,10)
+                                            .overlay{
+                                                Text("No. 003 Seed Pokemon HT.2,04'WT.15.2")
+                                                    .foregroundColor(.black)
+                                                    .font(.system(size: 8))
+                                                
+                                            }
+                                    }
+                    }
+                    
                     
                     // Description
                     HStack{
@@ -108,7 +122,39 @@ struct Bulbasaur: View {
                             .padding(.leading,10)
                         Spacer()
                     }
+                    HStack{
+                        Rectangle()
+                            .frame(height: 2)
+                            .padding(.horizontal,20)
+                    }
                     
+                    // Description about how to use pokemon
+                    HStack{
+                        Text("weakness")
+                            .foregroundColor(.black)
+                            .font(.system(size: 8))
+                            .padding(.horizontal)
+                        Text("resistance")
+                            .foregroundColor(.black)
+                            .font(.system(size: 8))
+                            .padding(.horizontal)
+                        Text("retreat cost")
+                            .foregroundColor(.black)
+                            .font(.system(size: 8))
+                            .padding(.horizontal)
+                    }
+                    HStack{
+                        Element(circleBackgroundColor: .elementRedBorder, circleColor: .red, element: "flame.fill")
+                            .padding(.leading, 35)
+                        Spacer()
+                        Element(circleBackgroundColor: .elementBlueBorder, circleColor: .blue, element: "drop.fill")
+                        Spacer()
+                        Element(circleBackgroundColor: .elementGreyBorder, circleColor: .white, element: "star.fill")
+                            .padding(.trailing, 35)
+
+                        
+                    }
+                        
                     
                 }
             }
