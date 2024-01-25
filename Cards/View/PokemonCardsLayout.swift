@@ -8,8 +8,13 @@
 import SwiftUI
 
 // Stored property
-let backgroundColorGreenToLightGreen = Gradient(colors:[Color.backgroundGreen, Color.backgroundLightGreen, Color.clear])
+
+// Gradient
+let backgroundColorGreenToLightGreen = Gradient(colors:[Color.backgroundGreen, Color.backgroundLightGreen, Color.tint, Color.backgroundGreen, Color.backgroundLightGreen, Color.tint,Color.backgroundGreen, Color.backgroundLightGreen])
 let tintGrey = Gradient(colors:[Color.placeHolderGrey, Color.white, Color.clear])
+let cardborderColor = Gradient(colors:[Color.borderYellowCharmander, Color.borderYellowLighter, Color.borderYellowCharmander])
+let placeholderColor = Gradient(colors:[Color.gray, Color.white, Color.gray])
+let colorsBulbsaur = Gradient(colors: [.green, .white, .green, .white])
 
 struct Bulbasaur: View {
     var body: some View {
@@ -17,24 +22,33 @@ struct Bulbasaur: View {
             
             //Card size
             RoundedRectangle(cornerSize: CGSize(width: 20, height: 10))
-            
+                .fill(RadialGradient(gradient: cardborderColor, center:.topLeading, startRadius: 100, endRadius: 400))
                 .cornerRadius(20)
-                .foregroundColor(.borderYellowBulbasaur)
+            
             
             //Color
             RadialGradient(
                 gradient: backgroundColorGreenToLightGreen,
                 center: .topLeading,
-                startRadius: 200,
-                endRadius: 700
+                startRadius: 50,
+                endRadius: 600
             )
             .cornerRadius(20)
             .overlay {
                 //Content Heads
                 VStack{
+                    
                     // Title
                     HStack{
                         Text("Bulbsaur")
+                            .overlay {
+                                LinearGradient(gradient: colorsBulbsaur, startPoint: .leading,
+                                       endPoint: .trailing
+                                   )
+                                   .mask(
+                                       Text("Bulbsaur")
+                                   )
+                               }
                             .foregroundColor(.black)
                             .font(.title2)
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
@@ -71,8 +85,8 @@ struct Bulbasaur: View {
                                     VStack{
                                         Spacer()
                                         Rectangle()
+                                            .fill(LinearGradient(gradient: placeholderColor, startPoint: .top, endPoint: .bottom))
                                             .frame(height: 10)
-                                            .border(Color.gray, width: 2)
                                             .padding(.horizontal,10)
                                             .overlay{
                                                 Text("No. 003 Seed Pokemon HT.2,04'WT.15.2")
@@ -124,6 +138,8 @@ struct Bulbasaur: View {
                     }
                     HStack{
                         Rectangle()
+                            .fill(LinearGradient(gradient: placeholderColor, startPoint: .leading, endPoint: .trailing))
+                            .padding(.horizontal,10)
                             .frame(height: 2)
                             .padding(.horizontal,20)
                     }
@@ -151,10 +167,12 @@ struct Bulbasaur: View {
                         Spacer()
                         Element(circleBackgroundColor: .elementGreyBorder, circleColor: .white, element: "star.fill")
                             .padding(.trailing, 35)
-
-                        
                     }
-                        
+                    //Pokemonstory
+                    Text("Bulbasaur is given to Ash, but it is pessimistic about him. However, its loyalties begin to improve and it eventually becomes one of Ash's most faithful Pokémon.")
+                        .foregroundColor(.black)
+                        .font(.system(size: 8))
+                        .border(Color.borderYellowBulbasaur,width: 2)
                     
                 }
             }

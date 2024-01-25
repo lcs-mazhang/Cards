@@ -15,7 +15,6 @@
 		DFEA8A042B5E7F1000F4DD4D /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEA8A032B5E7F1000F4DD4D /* Element.swift */; };
 		DFEA8A062B5E807F00F4DD4D /* PokemonCardsLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEA8A052B5E807F00F4DD4D /* PokemonCardsLayout.swift */; };
 		DFEA8A082B5EB37800F4DD4D /* PokemonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEA8A072B5EB37800F4DD4D /* PokemonList.swift */; };
-		DFEA8A0A2B5EB72600F4DD4D /* PokemonNameHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEA8A092B5EB72600F4DD4D /* PokemonNameHolder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		DFEA8A032B5E7F1000F4DD4D /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
 		DFEA8A052B5E807F00F4DD4D /* PokemonCardsLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCardsLayout.swift; sourceTree = "<group>"; };
 		DFEA8A072B5EB37800F4DD4D /* PokemonList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonList.swift; sourceTree = "<group>"; };
-		DFEA8A092B5EB72600F4DD4D /* PokemonNameHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonNameHolder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +93,6 @@
 				DFEA8A032B5E7F1000F4DD4D /* Element.swift */,
 				DFEA8A052B5E807F00F4DD4D /* PokemonCardsLayout.swift */,
 				DFEA8A072B5EB37800F4DD4D /* PokemonList.swift */,
-				DFEA8A092B5EB72600F4DD4D /* PokemonNameHolder.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -175,7 +172,6 @@
 				DFEA8A002B5E717700F4DD4D /* PokemonListView.swift in Sources */,
 				DFEA8A042B5E7F1000F4DD4D /* Element.swift in Sources */,
 				DFEA8A062B5E807F00F4DD4D /* PokemonCardsLayout.swift in Sources */,
-				DFEA8A0A2B5EB72600F4DD4D /* PokemonNameHolder.swift in Sources */,
 				DFEA8A082B5EB37800F4DD4D /* PokemonList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
