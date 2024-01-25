@@ -7,16 +7,41 @@
 
 import SwiftUI
 
-// Stored property
 
-// Gradient
-let backgroundColorGreenToLightGreen = Gradient(colors:[Color.backgroundGreen, Color.backgroundLightGreen, Color.tint, Color.backgroundGreen, Color.backgroundLightGreen, Color.tint,Color.backgroundGreen, Color.backgroundLightGreen])
-let tintGrey = Gradient(colors:[Color.placeHolderGrey, Color.white, Color.clear])
-let cardborderColor = Gradient(colors:[Color.borderYellowCharmander, Color.borderYellowLighter, Color.borderYellowCharmander])
-let placeholderColor = Gradient(colors:[Color.gray, Color.white, Color.gray])
-let colorsBulbsaur = Gradient(colors: [.green, .white, .green, .white])
 
-struct Bulbasaur: View {
+
+struct PokemonCardsLayout: View {
+    
+    // Stored property
+
+    // Gradient
+    let backgroundColorGreenToLightGreen = Gradient(colors:[Color.backgroundGreen, Color.backgroundLightGreen, Color.tint, Color.backgroundGreen, Color.backgroundLightGreen, Color.tint,Color.backgroundGreen, Color.backgroundLightGreen])
+    let tintGrey = Gradient(colors:[Color.placeHolderGrey, Color.white, Color.clear])
+    let cardborderColor = Gradient(colors:[Color.borderYellowCharmander, Color.borderYellowLighter, Color.borderYellowCharmander])
+    let placeholderColor = Gradient(colors:[Color.gray, Color.white, Color.gray])
+    let colorsBulbsaur = Gradient(colors: [.green, .white, .green, .white])
+
+    // Values
+
+    let titleOfPokemon: String
+    let lvOfPokemon: String
+    let hpNumber: String
+    let elementIconTypeOfPokemon: Element
+    let pokemonImage: String
+    let pokemonData: String
+    let firstSkillName: String
+    let firstSkillDiscirption: String
+    let firstSkillElement: Element
+    let secondSkillName: String
+    let secondSkillDiscirption: String
+    let secondSkillElement: Element
+    let secondSkillElement_2: Element
+    let weeknessElement: Element
+    let resistanceElement: Element
+    let retreatElement: Element
+    let pokemonStory: String
+    
+    
     var body: some View {
         ZStack{
             
@@ -40,20 +65,20 @@ struct Bulbasaur: View {
                     
                     // Title
                     HStack{
-                        Text("Bulbsaur")
+                        Text(titleOfPokemon)
                             .overlay {
                                 LinearGradient(gradient: colorsBulbsaur, startPoint: .leading,
                                        endPoint: .trailing
                                    )
                                    .mask(
-                                       Text("Bulbsaur")
+                                       Text(titleOfPokemon)
                                    )
                                }
                             .foregroundColor(.black)
                             .font(.title2)
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             .padding(.leading)
-                        Text("LV.14")
+                        Text(lvOfPokemon)
                             .foregroundColor(.black)
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             .font(.footnote)
@@ -64,18 +89,18 @@ struct Bulbasaur: View {
                             .foregroundColor(.black)
                             .fontWeight(.bold)
                             .font(.footnote)
-                        Text("60")
+                        Text(hpNumber)
                             .foregroundColor(.black)
                             .font(.title2)
                             .fontWeight(.bold)
-                        Element(circleBackgroundColor: .elementGreenBorder, circleColor: .green, element: "leaf.fill")
+                        elementIconTypeOfPokemon
                             .padding(.trailing)
                         
                     }
                     
                     // Pokemon image place holder
                     
-                            Image("Bulbmon")
+                            Image(pokemonImage)
                                 .resizable()
                                 .scaledToFit()
                                 .border(Color.gray, width: 5)
@@ -89,7 +114,7 @@ struct Bulbasaur: View {
                                             .frame(height: 10)
                                             .padding(.horizontal,10)
                                             .overlay{
-                                                Text("No. 003 Seed Pokemon HT.2,04'WT.15.2")
+                                                Text(pokemonData)
                                                     .foregroundColor(.black)
                                                     .font(.system(size: 8))
                                                 
@@ -100,9 +125,9 @@ struct Bulbasaur: View {
                     
                     // Description
                     HStack{
-                        Element(circleBackgroundColor: .gray, circleColor:.elementGrayInside , element: "")
+                        firstSkillElement
                             .padding(.leading,10)
-                        Text("Shake Vine")
+                        Text(firstSkillName)
                             .foregroundColor(.black)
                             .font(.title3)
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
@@ -110,7 +135,7 @@ struct Bulbasaur: View {
                         Spacer()
                     }
                     HStack{
-                        Text("The Defending Pokemon is now Asleep")
+                        Text(firstSkillDiscirption)
                             .foregroundColor(.black)
                             .font(.footnote)
                             .padding(.leading,10)
@@ -119,10 +144,10 @@ struct Bulbasaur: View {
                         // BulletSeed
 
                     HStack{
-                        Element(circleBackgroundColor: .elementGreenBorder, circleColor: .green, element: "leaf.fill")
+                        secondSkillElement
                             .padding(.leading,10)
-                        Element(circleBackgroundColor: .elementGreyBorder, circleColor: .white, element: "star.fill")
-                        Text("Bullet Seed")
+                        secondSkillElement_2
+                        Text(secondSkillName)
                             .foregroundColor(.black)
                             .font(.title3)
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
@@ -130,7 +155,7 @@ struct Bulbasaur: View {
                     }
                     
                     HStack{
-                        Text("Flip 4 coins. This attack does 10 damage times the number of heads")
+                        Text(secondSkillDiscirption)
                             .foregroundColor(.black)
                             .font(.footnote)
                             .padding(.leading,10)
@@ -146,7 +171,7 @@ struct Bulbasaur: View {
                     
                     // Description about how to use pokemon
                     HStack{
-                        Text("weakness")
+                        Text("weekness")
                             .foregroundColor(.black)
                             .font(.system(size: 8))
                             .padding(.horizontal)
@@ -160,16 +185,16 @@ struct Bulbasaur: View {
                             .padding(.horizontal)
                     }
                     HStack{
-                        Element(circleBackgroundColor: .elementRedBorder, circleColor: .red, element: "flame.fill")
+                        weeknessElement
                             .padding(.leading, 35)
                         Spacer()
-                        Element(circleBackgroundColor: .elementBlueBorder, circleColor: .blue, element: "drop.fill")
+                        resistanceElement
                         Spacer()
-                        Element(circleBackgroundColor: .elementGreyBorder, circleColor: .white, element: "star.fill")
+                        retreatElement
                             .padding(.trailing, 35)
                     }
                     //Pokemonstory
-                    Text("Bulbasaur is given to Ash, but it is pessimistic about him. However, its loyalties begin to improve and it eventually becomes one of Ash's most faithful Pokémon.")
+                    Text(pokemonStory)
                         .foregroundColor(.black)
                         .font(.system(size: 8))
                         .border(Color.borderYellowBulbasaur,width: 2)
@@ -186,5 +211,5 @@ struct Bulbasaur: View {
 }
 
 #Preview {
-    Bulbasaur()
+    PokemonCardsLayout(titleOfPokemon: "Bulbsaur", lvOfPokemon: "LV.14", hpNumber: "60", elementIconTypeOfPokemon: Element(circleBackgroundColor: .elementGreenBorder, circleColor: .green, element: "leaf.fill"), pokemonImage: "Bulbmon", pokemonData: "No. 003 Seed Pokemon HT.2,04'WT.15.2", firstSkillName: "Shake Vine", firstSkillDiscirption: "The Defending Pokemon is now Asleep", firstSkillElement: Element(circleBackgroundColor: .gray, circleColor: .elementGrayInside, element: "" ), secondSkillName: "Bullet Seed", secondSkillDiscirption: "Flip 4 coins. This attack does 10 damage times the number of heads", secondSkillElement: Element(circleBackgroundColor: .elementGreenBorder, circleColor: .green, element: "leaf.fill"), secondSkillElement_2: Element(circleBackgroundColor: .elementGreyBorder, circleColor: .white, element: "star.fill"), weeknessElement: Element(circleBackgroundColor: .elementRedBorder, circleColor: .red, element: "flame.fill"), resistanceElement: Element(circleBackgroundColor: .elementBlueBorder, circleColor: .blue, element: "drop.fill"), retreatElement: Element(circleBackgroundColor: .elementGreyBorder, circleColor: .white, element: "star.fill"), pokemonStory: "Bulbasaur is given to Ash, but it is pessimistic about him. However, its loyalties begin to improve and it eventually becomes one of Ash's most faithful Pokémon.")
 }
