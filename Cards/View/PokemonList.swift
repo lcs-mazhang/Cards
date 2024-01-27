@@ -8,8 +8,9 @@
 import SwiftUI
 
 // Stored properties
-
-let colorsBulbsaur = Gradient(colors: [.green, .white, .green, .white])
+let backgroundGradient = LinearGradient(
+    colors: [Color.tintGreen, Color.backgroundGreen],
+    startPoint: .top, endPoint: .bottom)
 
 struct PokemonList: View {
     var body: some View {
@@ -18,31 +19,31 @@ struct PokemonList: View {
                 
                 List {
                     NavigationLink{
-                        Bulbasaur()
+                        PokemonCardsLayout(pokemon: bulbasaur)
                     } label: {
                         PokemonListPlaceHolder(pokemonName: "Bulbasaur", pokemonLvPlaceHolder: "lv 14", pokemonPicture: "Bulbmon")
                     }
                     
                     NavigationLink{
-                        Ivysaur()
+                        PokemonCardsLayout(pokemon: ivysaur)
                     } label: {
                         PokemonListPlaceHolder(pokemonName: "Ivysaur", pokemonLvPlaceHolder: "lv 16", pokemonPicture: "Ivysaurmon")
                     }
                     
                     NavigationLink{
-                        Venusaur()
+                        PokemonCardsLayout(pokemon: venusaur)
                     } label: {
                         PokemonListPlaceHolder(pokemonName: "Venusaur", pokemonLvPlaceHolder: "EX", pokemonPicture: "Venusaurmon")
                     }
                     
                     NavigationLink{
-                        Virzion()
+                        PokemonCardsLayout(pokemon: virzion)
                     } label: {
                         PokemonListPlaceHolder(pokemonName: "Virzion", pokemonLvPlaceHolder: "lv 1", pokemonPicture: "Virizionmon")
                     }
                     
                     NavigationLink{
-                        Bounsweet()
+                        PokemonCardsLayout(pokemon: bounsweet)
                     } label: {
                         PokemonListPlaceHolder(pokemonName: "Bounsweet", pokemonLvPlaceHolder: "lv 3", pokemonPicture: "Bounsweetmon")
                     }
@@ -51,24 +52,11 @@ struct PokemonList: View {
                 
                 
             }
-            .navigationTitle("Pokedex GrassType")
-            
-            // MidText
-                .overlay {
-                    LinearGradient(gradient: colorsBulbsaur, startPoint: .leading,
-                                   endPoint: .trailing
-                    )
-                    .mask(
-                        Text("Pokedex GrassType")
-                    )
-                }
-                .foregroundColor(.black)
-                .font(.title2)
-                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                .padding(.leading)
         }
+
     }
 }
+
 
 
 #Preview {
