@@ -7,9 +7,6 @@
 
 import SwiftUI
 
-
-
-
 struct PokemonCardsLayout: View {
     
     // Stored property
