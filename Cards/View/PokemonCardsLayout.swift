@@ -76,7 +76,7 @@ struct PokemonCardsLayout: View {
                             .foregroundColor(.black)
                             .font(.title2)
                             .fontWeight(.bold)
-                        pokemon.elementIconTypeOfPokemon
+                        ElementView(elementToShow: pokemon.elementIconTypeOfPokemon)
                             .padding(.trailing)
                         
                     }
@@ -108,7 +108,7 @@ struct PokemonCardsLayout: View {
                     
                     // Description
                     HStack{
-                        pokemon.firstSkillElement
+                        ElementView(elementToShow: pokemon.firstSkillElement)
                             .padding(.leading,10)
                         Text(pokemon.firstSkillName)
                             .foregroundColor(.black)
@@ -127,9 +127,11 @@ struct PokemonCardsLayout: View {
                     // BulletSeed
                     
                     HStack{
-                        pokemon.secondSkillElement
+                        ElementView(elementToShow: pokemon.secondSkillElement)
                             .padding(.leading,10)
-                        pokemon.secondSkillElement_2
+                        
+                        ElementView(elementToShow: pokemon.secondSkillElement_2)
+                        
                         Text(pokemon.secondSkillName)
                             .foregroundColor(.black)
                             .font(.title3)
@@ -168,12 +170,12 @@ struct PokemonCardsLayout: View {
                             .padding(.horizontal)
                     }
                     HStack{
-                        pokemon.weeknessElement
+                        ElementView(elementToShow: pokemon.weeknessElement)
                             .padding(.leading, 35)
                         Spacer()
-                        pokemon.resistanceElement
+                        ElementView(elementToShow: pokemon.resistanceElement)
                         Spacer()
-                        pokemon.retreatElement
+                        ElementView(elementToShow: pokemon.retreatElement)
                             .padding(.trailing, 35)
                     }
                     //Pokemonstory

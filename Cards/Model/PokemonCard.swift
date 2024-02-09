@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct PokemonCard {
+struct PokemonCard: Identifiable{
+    let id = UUID()
     let titleOfPokemon: String
     let lvOfPokemon: String
     let hpNumber: String
@@ -104,7 +105,7 @@ let ivysaur = PokemonCard(titleOfPokemon: "Ivysaur",
                            circleColor: .green,
                            element: "leaf.fill"),
                           pokemonStory: "Ivysaur only shares its category with three other Pokémon, these being Bulbasaur, Venusaur, and Sunkern")
-let venusaur = PokemonCard(titleOfPokemon: "Ivysaur",
+let venusaur = PokemonCard(titleOfPokemon: "venusaur",
                            lvOfPokemon: "LV.16",
                            hpNumber: "70",
                            elementIconTypeOfPokemon: Element(
@@ -141,7 +142,7 @@ let venusaur = PokemonCard(titleOfPokemon: "Ivysaur",
                             circleColor: .green,
                             element: "leaf.fill"),
                            pokemonStory: "Ivysaur only shares its category with three other Pokémon, these being Bulbasaur, Venusaur, and Sunkern")
-let virzion = PokemonCard(titleOfPokemon: "Ivysaur",
+let virzion = PokemonCard(titleOfPokemon: "virzion",
                            lvOfPokemon: "LV.16",
                            hpNumber: "70",
                            elementIconTypeOfPokemon: Element(
@@ -215,3 +216,5 @@ let bounsweet = PokemonCard(titleOfPokemon: "Bounsweet",
                              circleColor: .white,
                              element: "star.fill"),
                             pokemonStory: "It has been known to drive away enemies by rotating its calyx, but it becomes dizzy afterward.")
+
+let allPokemon = [bulbasaur, ivysaur, venusaur, virzion, bounsweet]

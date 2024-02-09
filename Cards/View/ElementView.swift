@@ -7,12 +7,10 @@
 
 import SwiftUI
 
-struct Element: View {
+struct ElementView: View {
     
     // Stored properties
-    let circleBackgroundColor: Color
-    let circleColor: Color
-    let element: String
+    let elementToShow: Element
     
     // Coumputed properties
     var body: some View {
@@ -20,14 +18,14 @@ struct Element: View {
         ZStack {
             // First layer
             Circle()
-                .foregroundColor(circleBackgroundColor)
+                .foregroundColor(elementToShow.circleBackgroundColor)
                 .frame(width: 16)
             // SecondLayer
             Circle()
-                .foregroundColor(circleColor)
+                .foregroundColor(elementToShow.circleColor)
                 .frame(width: 12)
             // ThirdLayer
-            Image(systemName: element)
+            Image(systemName: elementToShow.element)
                 .scaledToFit()
                 .foregroundColor(.black)
         }
@@ -35,5 +33,5 @@ struct Element: View {
 }
 
 #Preview {
-    Element(circleBackgroundColor: .elementRedBorder, circleColor: .red, element: "flame.fill")
+    ElementView(elementToShow: exampleElement)
 }
