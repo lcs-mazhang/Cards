@@ -17,16 +17,16 @@ struct PokemonList: View {
                     PokemonCardsLayout(pokemon: currentPokemon)
                 } label: {
                     Text(currentPokemon.titleOfPokemon)
+                        .foregroundColor(.black)
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                 }
-
             }
-            
+            .background(Color.tintGreen)
         }
-        
+        .background(Color.tintGreen)
     }
 }
 
 #Preview {
     PokemonList()
 }
-
